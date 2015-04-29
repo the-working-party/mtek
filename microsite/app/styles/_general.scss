@@ -1,7 +1,6 @@
 body {
     background: $gray-lighter;
 }
-
 .outer {
     max-width: 1400px;
     margin: 0 auto;
@@ -15,6 +14,7 @@ body {
         background-image: url(../images/xomni-logo.png);
         width: 230px;
         height: 70px;
+        
     }
 }
 
@@ -30,9 +30,9 @@ body {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        h1 {
-            color: $white;
-        }
+            h1 {
+                color: $white;
+                }
     }
     .introduction {
         display: table-cell;
@@ -40,15 +40,15 @@ body {
         height: 100%;
         width: 100%;
         text-align: center;
-        padding: 0 10%;
+        padding: 0 10%
     }
 }
 
 .features-container {
     background: $white;
     &:before, &:after {
-        content: " ";
-        display: table;
+      content: " ";
+    display: table;
     }
     .feature {
         width: 100%;
@@ -57,16 +57,14 @@ body {
             max-width: 420px;
             margin: 0 auto;
         }
-
         @include breakpoint(sm) {
             width: 50%;
             float: left;
         }
-
+        
         @include breakpoint(md) {
             width: 33.33%;
         }
-
         img {
             width: 100%;
             height: auto;
@@ -84,9 +82,9 @@ body {
             position: absolute;
             width: 28px;
             height: 16px;
-            top: -15px;
-            left: 50%;
-            margin-left: -14px;
+            top:-15px;
+            left:50%;
+            margin-left:-14px;
             background: url(../images/point.svg) center center no-repeat;
             background-size: 24px 16px;
         }
@@ -97,30 +95,18 @@ body {
     background: $white;
     padding: 50px;
     &:before, &:after {
-        content: " ";
-        display: table;
+      content: " ";
+       display: table;
     }
+
 }
 
 .footer {
-    padding: 50px 20px;
+    padding: 50px 0;
     font-size: 0.9em;
-    .footer-left {
-        text-align: center;
-        margin-bottom: 30px;
-        @include breakpoint(sm) {
-            text-align: left;
-        }
-    }
-    .footer-right {
-        text-align: center;
-        @include breakpoint(sm) {
-            text-align: right;
-        }
-    }
     &:before, &:after {
-        content: " ";
-        display: table;
+      content: " ";
+       display: table;
     }
     .xomni & {
         background: $navy;
@@ -128,18 +114,5 @@ body {
         a {
             color: $xomni-primary;
         }
-    }
-}
-
-.mocal-footer {
-    background-image: url(../images/mocal-white.svg);
-    background-size: 150px 40px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 40px;
-    display: inline-block;
-    .no-svg & {
-        background-image: url(../images/mocal-white.png);
     }
 }
