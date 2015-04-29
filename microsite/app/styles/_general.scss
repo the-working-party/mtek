@@ -1,71 +1,134 @@
 body {
     background: $gray-lighter;
 }
+
 .outer {
     max-width: 1400px;
     margin: 0 auto;
     display: block;
 }
 
+header {
+    position: relative;
+}
+.navbar.navbar-default {
+    border-radius: 0;
+    background: none;
+    margin: 0;
+    
+    width: 100%;
+    border:0;
+    @include breakpoint(sm) {
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    .nav.navbar-nav {
+        text-transform: uppercase;
+        font-size: 0.8em;
+        letter-spacing: 0.2em;
+        text-align: center;
+        > li {
+            display: inline-block;
+            >a {
+                
+            }
+            &.active {
+                >a {
+                    background: none;
+                }
+            }
+        }
+    }
+}
 .brand {
     display: inline-block;
     margin: 0 auto;
-    .xomni & {
-        background-image: url(../images/xomni-logo.png);
-        width: 230px;
-        height: 70px;
-        
+    transition: all .2s ease;
+    .mocal & {
+        background-image: url(../images/mocal-black.svg);
+        background-size: 200px 55px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 55px;
+        display: inline-block;
+        .no-svg & {
+            background-image: url(../images/mocal-white.png);
+        }
+        @include breakpoint(sm) {
+            width: 210px;
+            height: 56px;
+            background-size: 210px 56px;
+        }
+        @include breakpoint(md) {
+            width: 300px;
+            height: 80px;
+            background-size: 300px 80px;
+        }
+        /*@include breakpoint(lg) {
+            width: 210px;
+            height: 56px;
+            background-size: 210px 56px;
+        }*/
     }
+    
 }
 
 .introduction-container {
     text-align: center;
     display: table;
     height: 75vh;
-    min-height: 500px;
+    min-height: 550px;
     width: 100%;
     background: $white;
-    .xomni & {
-        background-image: url(../images/banner1.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-            h1 {
-                color: $white;
-                }
-    }
+    
     .introduction {
         display: table-cell;
         vertical-align: middle;
         height: 100%;
         width: 100%;
         text-align: center;
-        padding: 0 10%
+        padding: 0 10%;
+        @include breakpoint(md) {
+            padding: 0 25%;
+        }
     }
 }
 
 .features-container {
     background: $white;
     &:before, &:after {
-      content: " ";
-    display: table;
+        content: " ";
+        display: table;
     }
     .feature {
         width: 100%;
         display: block;
+        transition: transform .2s ease;
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+        &:hover {
+            transform: translateY(-6px);
+        }
         @include breakpoint(xs) {
             max-width: 420px;
             margin: 0 auto;
         }
+
         @include breakpoint(sm) {
-            width: 50%;
+            width: 33.33%;
             float: left;
         }
-        
-        @include breakpoint(md) {
-            width: 33.33%;
+
+       
+        .logo {
+            max-width: 70%;
+            margin: 0 auto 10px;
+            display: block;
         }
-        img {
+        .thumb {
             width: 100%;
             height: auto;
         }
@@ -82,9 +145,9 @@ body {
             position: absolute;
             width: 28px;
             height: 16px;
-            top:-15px;
-            left:50%;
-            margin-left:-14px;
+            top: -15px;
+            left: 50%;
+            margin-left: -14px;
             background: url(../images/point.svg) center center no-repeat;
             background-size: 24px 16px;
         }
@@ -95,24 +158,45 @@ body {
     background: $white;
     padding: 50px;
     &:before, &:after {
-      content: " ";
-       display: table;
+        content: " ";
+        display: table;
     }
-
 }
 
 .footer {
-    padding: 50px 0;
+    padding: 50px 20px;
     font-size: 0.9em;
-    &:before, &:after {
-      content: " ";
-       display: table;
-    }
-    .xomni & {
-        background: $navy;
+    background: $navy;
         color: $white;
-        a {
-            color: $xomni-primary;
+    .footer-left {
+        text-align: center;
+        margin-bottom: 30px;
+        @include breakpoint(sm) {
+            text-align: left;
         }
+    }
+    .footer-right {
+        text-align: center;
+        @include breakpoint(sm) {
+            text-align: right;
+        }
+    }
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    
+}
+
+.mocal-footer {
+    background-image: url(../images/mocal-white.svg);
+    background-size: 150px 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    .no-svg & {
+        background-image: url(../images/mocal-white.png);
     }
 }
