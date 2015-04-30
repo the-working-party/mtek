@@ -11,31 +11,60 @@ body {
 header {
     position: relative;
 }
+main {
+    background: $white;
+    .child-page & {
+        padding-top: 50px;
+    }
+}
 .navbar.navbar-default {
     border-radius: 0;
     background: none;
     margin: 0;
-    
     width: 100%;
     border:0;
+    text-align: center;
     @include breakpoint(sm) {
         position: absolute;
         top:0;
         left:0;
+        .child-page & {
+            position: static;
+        }
     }
     .nav.navbar-nav {
         text-transform: uppercase;
-        font-size: 0.8em;
-        letter-spacing: 0.2em;
         text-align: center;
+        font-size: 0.7em;
+        display: block;
+        width: 100%;
+        margin: 0;
+        @include breakpoint(sm) {
+            font-size: 0.75em;
+            letter-spacing: 0.2em;
+            /*.child-page & {
+                float: right;
+                width: auto;
+            }*/
+        }
+        
         > li {
+            float: none;
             display: inline-block;
             >a {
-                
+                color: $text-color;
+                padding: 10px;
+                &:hover, &:focus {
+                    color: $brand-primary;
+                }
             }
             &.active {
-                >a {
+                @include breakpoint(xs) {
+                    display: none;
+                }
+                >a, >a:hover, >a:focus {
                     background: none;
+                    color: lighten($text-color, 10%);
                 }
             }
         }
@@ -75,13 +104,43 @@ header {
     
 }
 
+.brand-header {
+    display: inline-block;
+    margin: 15px auto;
+    background-image: url(../images/mocal-black.png);
+        background-size: 200px 55px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 55px;
+   
+}
+
 .introduction-container {
     text-align: center;
-    display: table;
-    height: 75vh;
-    min-height: 550px;
+    display: block;
     width: 100%;
     background: $white;
+    padding: 40px 0;
+    @include breakpoint(sm) {
+        display: table;
+    height: 75vh;
+    min-height: 600px;
+    }
+    .child-page & {
+        background-color: $gray-lighter;
+        background-image: url(../images/point.svg);
+        background-position: bottom center;
+        background-size: 24px 16px;
+        background-repeat: no-repeat;
+        display: block;
+        padding: 40px 0;
+        @include breakpoint(sm) {
+        display: table;
+        height: 50vh;
+        min-height: 350px;
+        }
+    }
     
     .introduction {
         display: table-cell;
@@ -105,16 +164,28 @@ header {
     .feature {
         width: 100%;
         display: block;
-        transition: transform .2s ease;
+        transition: all .2s ease;
         &:hover, &:focus {
             text-decoration: none;
+            
+            .caption {
+                color: $brand-primary;
+            }
+            
         }
-        &:hover {
+        
+        .no-touch & {
+            &:hover {
             transform: translateY(-6px);
+                .thumb {
+            opacity: 0;  
+                }
+        }
         }
         @include breakpoint(xs) {
             max-width: 420px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
+            border-bottom: 1px solid $gray-lighter;
         }
 
         @include breakpoint(sm) {
@@ -128,18 +199,36 @@ header {
             margin: 0 auto 10px;
             display: block;
         }
+        .thumb-container {
+            position: relative;
+            background-color: darken($mtek-secondary, 20%);
+            background-color: $brand-primary;
+            background-image: url(../images/arrow.svg);
+            background-size: 50px 50px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all .2s ease;
+            @include breakpoint(md) {
+                background-size: 80px 80px;
+            }
+        }
         .thumb {
             width: 100%;
             height: auto;
+            transition: all .2s ease;
         }
+       
         .caption {
             padding: 20px 30px;
             margin-bottom: 20px;
             background: $white;
             position: relative;
+            color: $text-color;
+            transition: color .2s ease;
             @include breakpoint(lg) {
                 padding: 20px 40px;
             }
+            
         }
         .point {
             position: absolute;
@@ -151,6 +240,7 @@ header {
             background: url(../images/point.svg) center center no-repeat;
             background-size: 24px 16px;
         }
+        
     }
 }
 
@@ -166,13 +256,22 @@ header {
 .footer {
     padding: 50px 20px;
     font-size: 0.9em;
-    background: $navy;
+    background: $text-color;
         color: $white;
+    
     .footer-left {
         text-align: center;
         margin-bottom: 30px;
         @include breakpoint(sm) {
             text-align: left;
+        }
+        a {
+            padding: 10px;
+            display: inline-block;
+            &:hover, &:focus {
+                text-decoration: none;
+                color: lighten($brand-primary, 15%);
+            }
         }
     }
     .footer-right {
