@@ -4,7 +4,7 @@ Landing page templates built using Yeoman Webapp Generator.
 
 To run locally:
 
-1. In terminal, cd into "landing-pages"
+1. In terminal, cd into directory
 2. "bower install"
 3. "npm install"
 4. "grunt serve" will launch localhost
