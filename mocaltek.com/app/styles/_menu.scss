@@ -1,0 +1,123 @@
+.overlay-container {
+
+	position: fixed;
+		z-index: 1000;
+		top:0;
+		right: 0;
+		width: 250px;
+		height: 100%;
+		background: $text-color;
+		overflow: auto;
+		transition: transform .4s ease;
+		transform: translateX(100%);
+ 
+		&.active {
+            transform: translateX(0%);
+		}
+	@include breakpoint(sm) {
+		
+		position: static;
+		width: auto;
+		background: $white;
+		transform: translateX(0%);
+	}
+	
+		.overlay-content {
+			
+			padding: 60px 0 20px 0;
+			@include breakpoint(sm) {
+				padding:0;
+			}
+            
+		}
+		
+	
+}
+.no-csstransforms {
+    /*.js-overlay-button {
+        display: none;
+    }*/
+    .overlay-container {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.js-overlay-button {
+	float: right;
+	margin: 0;
+	font-size: 1.2em;
+	background: none;
+}
+.js-overlay-close {
+	background: none;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	overflow: hidden;
+	border: none;
+	outline: none;
+	z-index: 1000;
+    color: $white;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+.navbar.navbar-default {
+	background: none;
+	border: none;
+	padding: 20px 0;
+	.brand {
+		float: left;
+		width: 180px;
+		height: 48px;
+		background-size: 180px 48px;
+		@include breakpoint(sm) {
+			.home & {
+				display: none;
+			}
+		}
+	}
+	.navbar-nav {
+		margin:0;
+		> li {
+			@include breakpoint(sm) {
+				margin: 0 10px;
+			}
+			>a {
+				color: $white;
+				font-size: 0.8em;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+
+				@include breakpoint(sm) {
+					color: $text-color;
+					padding:12px 0;
+					border-bottom: 2px solid transparent;
+					&:hover, &:focus {
+						color:$link-color;
+						border-bottom: 2px solid $link-color;
+					}
+				}
+			}
+			&.active {
+				>a {
+					background: none;
+					color: lighten($text-color, 20%);
+					@include breakpoint(sm){
+						border-bottom: 2px solid lighten($text-color, 30%);
+					}
+					&:hover, &:focus {
+						color: lighten($text-color, 20%);
+						cursor: default;
+						@include breakpoint(sm){
+						border-bottom: 2px solid lighten($text-color, 30%);
+					}
+					}
+				}
+			}
+		}
+	}
+}

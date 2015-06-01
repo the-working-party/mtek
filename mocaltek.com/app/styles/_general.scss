@@ -1,0 +1,302 @@
+body {
+    background: $white;
+}
+
+.outer {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: block;
+}
+
+header {
+    position: relative;
+}
+main {
+    background: $white;
+    .child-page & {
+        padding-top: 20px;
+    }
+}
+
+.brand {
+    display: inline-block;
+    margin: 0 auto;
+    transition: all .2s ease;
+    .mocal & {
+        background-image: url(../images/mocal-black.svg);
+        background-size: 200px 55px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 55px;
+        display: inline-block;
+        .no-svg & {
+            background-image: url(../images/mocal-black.png);
+        }
+        @include breakpoint(sm) {
+            width: 210px;
+            height: 56px;
+            background-size: 210px 56px;
+        }
+        @include breakpoint(md) {
+            width: 300px;
+            height: 80px;
+            background-size: 300px 80px;
+        }
+        /*@include breakpoint(lg) {
+            width: 210px;
+            height: 56px;
+            background-size: 210px 56px;
+            }*/
+        }
+
+        .chainformation & {
+            background-image: url(../images/Chainformation_timely-relevant-and-critical-know-how-for-your-franchise-network1.png);
+            width: 280px;
+            height: 34px;
+
+            background-size: 280px 34px;
+
+            @include breakpoint(sm) {
+                width: 560px;
+                height: 68px;
+                background-size: 560px 68px;
+                margin-bottom: 50px;
+            }
+        }
+
+    }
+
+    .brand-header {
+        display: inline-block;
+        margin: 15px auto;
+        background-image: url(../images/mocal-black.png);
+        background-size: 200px 55px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 55px;
+
+    }
+
+    .mocal-header {
+        display: inline-block;
+        margin: 0 auto;
+        background-image: url(../images/mocal-black.svg);
+        background-size: 200px 55px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 55px;
+        display: inline-block;
+        transition: all .2s ease;
+        .no-svg & {
+            background-image: url(../images/mocal-black.png);
+        }
+        @include breakpoint(sm) {
+            width: 210px;
+            height: 56px;
+            background-size: 210px 56px;
+        }
+        @include breakpoint(md) {
+            width: 300px;
+            height: 80px;
+            background-size: 300px 80px;
+        }
+    }
+
+    .introduction-container {
+        text-align: center;
+        display: block;
+        width: 100%;
+        background: $white;
+        padding: 40px 0;
+        @include breakpoint(sm) {
+            display: table;
+            height: 60vh;
+            min-height: 400px;
+        }
+        .child-page & {
+            background-repeat: no-repeat;
+            display: block;
+            padding: 15px 0;
+            @include breakpoint(sm) {
+                display: table;
+                height: 35vh;
+                min-height: 250px;
+            }
+        }
+
+        .introduction {
+            display: block;
+            vertical-align: middle;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            padding: 0 10%;
+            @include breakpoint(sm) {
+                display: table-cell;
+            }
+            @include breakpoint(md) {
+                padding: 0 25%;
+            }
+        }
+    }
+
+    .features-container {
+        background: $white;
+        text-align: center;
+        &:before, &:after {
+            content: " ";
+            display: table;
+        }
+        .feature {
+            width: 100%;
+            display: block;
+            transition: all .2s ease;
+
+
+
+            @include breakpoint(xs) {
+                max-width: 420px;
+                margin: 0 auto 20px;
+                border-bottom: 1px solid $gray-lighter;
+            }
+            @include breakpoint(sm) {
+                    width: 31%;
+                    float: none;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+            
+
+
+            .logo {
+                max-width: 70%;
+                margin: 0 auto 10px;
+                display: block;
+            }
+            .thumb-container {
+                position: relative;
+                background-color: darken($mtek-secondary, 20%);
+                background-color: $brand-primary;
+                background-image: url(../images/arrow.svg);
+                background-size: 50px 50px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                transition: all .2s ease;
+                @include breakpoint(md) {
+                    background-size: 80px 80px;
+                }
+            }
+            .thumb {
+                width: 100%;
+                height: auto;
+                transition: all .2s ease;
+            }
+
+            .caption {
+                padding: 20px 30px;
+                margin-bottom: 20px;
+                background: $white;
+                position: relative;
+                color: $text-color;
+                transition: color .2s ease;
+                @include breakpoint(lg) {
+                    padding: 20px 40px;
+                }
+
+            }
+            .point {
+                position: absolute;
+                width: 28px;
+                height: 16px;
+                top: -15px;
+                left: 50%;
+                margin-left: -14px;
+                background: url(../images/point.svg) center center no-repeat;
+                background-size: 24px 16px;
+            }
+            &.link {
+                @include breakpoint(sm) {
+                    width: 33.33%;
+                    float: left;
+                }
+
+                &:hover, &:focus {
+                    text-decoration: none;
+
+                    .caption {
+                        color: $brand-primary;
+                    }
+
+                }
+                .no-touch & {
+                    &:hover {
+                        transform: translateY(-6px);
+                        .thumb {
+                            opacity: 0;  
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .cta {
+        background: $white;
+        padding: 50px;
+        &:before, &:after {
+            content: " ";
+            display: table;
+        }
+    }
+
+    .footer {
+        padding: 50px 20px;
+        font-size: 0.9em;
+        background: $text-color;
+        color: $white;
+
+        .footer-left {
+            text-align: center;
+            margin-bottom: 30px;
+            @include breakpoint(sm) {
+                text-align: left;
+            }
+            a {
+                padding: 10px;
+                display: inline-block;
+                &:hover, &:focus {
+                    text-decoration: none;
+                    color: lighten($brand-primary, 15%);
+                }
+            }
+        }
+        .footer-right {
+            text-align: center;
+            @include breakpoint(sm) {
+                text-align: right;
+            }
+        }
+        &:before, &:after {
+            content: " ";
+            display: table;
+        }
+
+    }
+
+    .mocal-footer {
+        background-image: url(../images/mocal-white.svg);
+        background-size: 150px 40px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 40px;
+        display: inline-block;
+        .no-svg & {
+            background-image: url(../images/mocal-white.png);
+        }
+    }

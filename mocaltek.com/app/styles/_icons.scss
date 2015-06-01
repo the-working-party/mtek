@@ -1,0 +1,86 @@
+.icon-container {
+    display: table;
+    height: 100px;
+    width: 100%;
+    @include breakpoint(sm) {
+        height: 120px;
+    }
+}
+.icon {
+    display: table-cell;
+    vertical-align: middle;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.icon-compliance {
+    background-image: url(../images/icon-compliance.svg);
+    background-size: 50px 56px;
+    width: 50px;
+    height: 56px;
+    @include breakpoint(sm) {
+        background-size: 70px 84px;
+    width: 70px;
+    height: 84px;
+    }
+}
+
+.icon-empower {
+    background-image: url(../images/icon-empower.svg);
+    background-size: 60px 60px;
+    width: 60px;
+    height: 60px;
+    @include breakpoint(sm) {
+        background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    }
+}
+.icon-process {
+    background-image: url(../images/icon-process.svg);
+    background-size: 72px 72px;
+    width: 72px;
+    height: 72px;
+    @include breakpoint(sm) {
+        background-size: 108px 108px;
+    width: 108px;
+    height: 108px;
+    }
+}
+.icon-reputation {
+    background-image: url(../images/icon-reputation.svg);
+    background-size: 56px 57px;
+    width: 56px;
+    height: 57px;
+    @include breakpoint(sm) {
+       background-size: 84px 84px;
+    width: 84px;
+    height: 84px; 
+    }
+}
+.icon-staff {
+    background-image: url(../images/icon-staff.svg);
+    background-size: 56px 72px;
+    width: 56px;
+    height: 72px;
+    @include breakpoint(sm) {
+        background-size: 84px 113px;
+    width: 84px;
+    height: 113px;
+    }
+}
+.chainformation-diagram {
+    display: block;
+    margin: 30px auto;
+    background-image: url(../images/chainformation-diagram.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 280px 233px;
+        width:280px;
+        height: 233px;
+    @include breakpoint(sm) {
+        background-size: 384px 320px;
+        width:384px;
+        height: 320px;
+    }
+}
