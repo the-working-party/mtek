@@ -67,6 +67,9 @@ p {
         font-size: 17px;
         line-height: 1.8;
     }
+    &.lead {
+        font-size: 1.4em;
+    }
 }
 
 a {
@@ -74,17 +77,9 @@ a {
 }
 
 .btn {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.8em;
-    border-radius: 0;
-    padding: 12px 20;
-    white-space: normal;
-    margin:10px;
+
     transition: all .2s ease;
     &:hover, &:focus {
-    
        
     }
 }

@@ -1,0 +1,109 @@
+.contact-form {
+
+	margin-bottom: 30px;
+	.btn-primary {
+		font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.8em;
+            border-radius: 0;
+            padding: 15px 20px;
+	}
+}
+
+.form-control {
+	height: auto;
+	padding: 15px;
+	border: 2px solid $gray-lighter;
+	box-shadow: none;
+	&:focus {
+		outline: none;
+		border-color: $black;
+		box-shadow: none;
+	}
+	
+}
+
+/* .btn-primary {
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-weight: 600;
+	background: $black;
+	border-color: $black;
+	padding: 15px;
+	transition: all .15s ease;
+	&:hover, &:focus {
+		outline: none;
+		background-color: $brand-primary;
+		border-color: $brand-primary;
+	}
+	&.disabled, &.disabled:hover, &.disabled:focus {
+		background-color: lighten($black, 30%);
+		border-color: lighten($black, 30%);
+	}
+} */
+
+
+
+
+.btn-group .dropdown-toggle {
+	&:hover, &:focus, &:active {
+		border: 2px solid $gray-lighter;
+		box-shadow: none;
+		background: $white;
+		outline: none;
+	}
+}
+.btn-group.open .dropdown-toggle {
+	background: $gray-lighter;
+	border-color: $gray-lighter;
+	box-shadow: none;
+}
+.dropdown-menu > li > a {
+	padding: 8px 12px;
+	
+}
+
+.board-contact {
+	display: table;
+	width: 100%;
+	margin-bottom: 30px;
+	.img-container {
+		width: 120px;
+		height: auto;
+		position: relative;
+		display: table-cell;
+		@include breakpoint(xsm) {
+			width: 200px;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.name-tag {
+		display: table-cell;
+		position: relative;
+		background: $white;
+		vertical-align: middle;
+		padding: 20px;
+		@include breakpoint(xsm) {
+			padding: 40px;
+		}
+		&:before {
+			right: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-color: rgba(255, 255, 255, 0);
+				border-right-color: #ffffff;
+				border-width: 10px;
+				margin-top: -10px;
+
+		}
+	}
+}

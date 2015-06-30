@@ -6,7 +6,24 @@
     <title>Mocal Technologies - How we work</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="images/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="images/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="images/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="images/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -76,41 +93,65 @@
 
         <main>
 
-            
+
             <div class="container">
-            
+
                 <div class="row">
-                
+
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                    <h1 class="text-center">Contact</h1>
-                    
-                        
-<p>To come.</p>
+                        <h1 class="text-center">Contact</h1>
+                        <p>Tell us what's on your mind?</p>
+                        <form data-toggle="validator" role="form" class="contact-form">
+                            <div class="form-group">
+                              <label for="name" class="sr-only">Name</label>
+                              <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                          <div class="form-group">
+                              <label for="email" class="sr-only">Email address</label>
+                              <input type="email" class="form-control" id="email" placeholder="Email address" data-error="Please enter a valid email address" required>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                          <div class="form-group">
+                              <label for="email" class="sr-only">Phone</label>
+                              <input type="email" class="form-control" id="email" placeholder="Phone number" >
+                              
+                          </div>
+                          <div class="form-group">
+                              <label for="recipient">Which product are you interested in?</label>
+                              <select class="selectpicker form-control" id="interest">
+                                <option value="">-- Please select --</option>
+                                <option value="mocal">Mocal</option>
+                                <option value="xomni">Xomni</option>
+                                <option value="chainformation">Chainformation</option>
+                                
+                            </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="message" class="sr-only">Your message</label>
+                          <textarea id="message" placeholder="Your message" class="form-control" rows="5" required></textarea>
+                          <div class="help-block with-errors"></div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Send</button>
 
-                    
-                    </div>
-                    
-                </div>
-            
-            </div>
-
-
-            <div class="cta text-center clearfix">
-                <div class="row">
-
-                    <div class="col-sm-12">
-                        <h4>Call to action text.</h4>
-                        <p><a href="" class="btn btn-primary">Contact us</a>
-                        </p>
-                    </div>
-                </div>
 
 
 
-            </div>
+
+                  </form>
 
 
-        </main>
+              </div>
+
+          </div>
+
+      </div>
+
+
+
+
+
+  </main>
 
         </div>
 
@@ -123,7 +164,7 @@
 
                     <div class="col-sm-6 footer-left">
 
-                        <p><a href="/">Home</a><a href="what-we-do.html">What we do</a><a href="how-we-work.html">How we work</a><a href="our-partners.html">Our partners</a><a href="contact.html">Contact</a>
+                        <p><a href="index.html">Home</a><a href="what-we-do.html">What we do</a><a href="how-we-work.html">How we work</a><a href="partners.html">Our partners</a><a href="contact.html">Contact</a>
                         </p>
 
                     </div>
@@ -131,7 +172,7 @@
                     <div class="col-sm-6 footer-right">
 
                         <p>
-                            <a href="/" target="_blank" class="mocal-footer" title="Mocal Technologies"></a>
+                            <a href="index.html" target="_blank" class="mocal-footer" title="Mocal Technologies"></a>
                         </p>
                         <p class="small">&copy; Copyright
                             <script language="JavaScript" type="text/javascript">
@@ -141,7 +182,7 @@
                                     theYear = theYear + 1900
                                 document.write(theYear)
                             </script>
-                            Mocal Technologies. All rights reserved.</p>
+                            Bucanero Investments Pty Ltd</p>
 
                     </div>
                 </div>
@@ -192,6 +233,7 @@
 
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/wow.js"></script>
+    <script src="scripts/bootstrap-select.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>

@@ -1,3 +1,6 @@
+html, body {
+    position: relative;
+}
 body {
     background: $white;
 }
@@ -252,6 +255,16 @@ main {
             content: " ";
             display: table;
         }
+        .btn {
+            margin: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.8em;
+            border-radius: 0;
+            padding: 15px 20px;
+            white-space: normal;
+        }
     }
 
     .footer {
@@ -300,3 +313,11 @@ main {
             background-image: url(../images/mocal-white.png);
         }
     }
+.partner-logo {
+    max-width: 200px;
+    margin: 0 auto 10px;
+    @include breakpoint(sm) {
+        max-width: 100%;
+    }
+}
+
