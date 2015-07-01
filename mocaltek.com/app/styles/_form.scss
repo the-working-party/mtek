@@ -8,6 +8,18 @@
             font-size: 0.8em;
             border-radius: 0;
             padding: 15px 20px;
+            border: 2px solid $text-color;
+            color: $text-color;
+            background: none;
+           &:hover, &:focus {
+           	color: $mtek-primary;
+           	border-color: $mtek-primary;
+           	background: none;
+           }
+           &.disabled, &.disabled:hover, &.disabled:focus {
+           	border-color: lighten($text-color, 30%);
+           	color: lighten($text-color, 30%);
+           }
 	}
 }
 
