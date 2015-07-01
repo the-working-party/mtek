@@ -2,9 +2,10 @@
   "name": "xomni-landing",
   "private": true,
   "dependencies": {
-      "jquery": "1.11.1",
+    "jquery": "1.11.1",
     "bootstrap-sass-official": "~3.2.0",
     "modernizr": "~2.8.2",
-      "matchHeight": "~0.6.0"
+    "matchHeight": "~0.6.0",
+    "font-awesome": "~4.3.0"
   }
 }
