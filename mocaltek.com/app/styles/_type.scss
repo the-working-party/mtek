@@ -88,6 +88,7 @@ a {
     background: none;
     border: 2px solid $text-color;
     color: $text-color;
+    border-radius: 0;
     &:hover, &:focus {
         border-color: $brand-primary;
         color: $brand-primary;
