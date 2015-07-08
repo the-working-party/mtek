@@ -2,6 +2,11 @@ $(document).ready(function () {
     
     /*$('.feature').matchHeight();*/
 
+$(window).load(function () {
+        $('#preloader').fadeOut('slow', function () {
+            $(this).remove();
+        });
+    });
 
 
     // Menu overlay

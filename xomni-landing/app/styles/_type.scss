@@ -6,7 +6,7 @@ body {
     line-height: 1.5;
     font-weight: 400;
     &.xomni {
-        color: $xomni-text;
+        color: $text-color;
     }
 }
 
@@ -57,33 +57,57 @@ h3 {
     }
 }
 
+a {
+    color: $navy;
+    transition: all .1s ease;
+    &:hover, &:focus {
+        color: $xomni-primary;
+        text-decoration: none;
+    }
+}
+
 .btn {
-    font-weight: 300;
+
     transition: all .2s ease;
     &:hover, &:focus {
     
        
     }
 }
-.btn-lg {
-    padding: 12px 20px;
+
+b, strong {
+    font-weight: 700;
 }
 
-.btn-primary {
 
-    .xomni & {
-        background: none;
-        border: 2px solid $xomni-text;
-        box-shadow: none;
-        color: $xomni-text;
-        text-transform: uppercase;
-        font-size: 0.9em;
-        font-weight: bold;
-        letter-spacing: 0.1em;
-        &:hover, &:focus {
-            border-color: $xomni-primary;
-            background: $xomni-primary;
-            color: $white;
-        }
+
+
+
+.btn {
+    margin: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.8em;
+            border-radius: 4px;
+            padding: 15px 20px;
+            white-space: normal;
+    transition: all .2s ease;
+    &:hover, &:focus {
+       
     }
 }
+
+.btn-default {
+    background: none;
+    border: 2px solid $text-color;
+    color: $text-color;
+    border-radius: 4px;
+    &:hover, &:focus {
+        border-color: $xomni-primary;
+        color: $xomni-primary;
+        background: none;
+    }
+}
+
+

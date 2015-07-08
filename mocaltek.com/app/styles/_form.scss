@@ -1,6 +1,9 @@
 .contact-form {
 
-	margin-bottom: 30px;
+	margin-bottom: 50px;
+	@include breakpoint(sm) {
+		margin-bottom: 80px;
+	}
 	.btn-primary {
 		font-weight: 700;
             text-transform: uppercase;
